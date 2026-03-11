@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Image from "next/image";
 import logo from "@/public/assets/logo (2) 1.png";
@@ -8,9 +8,25 @@ const navLinks = ["Process", "Conditions", "Pricing", "FAQ"];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <header className="w-full border-b border-gray-100 bg-white shadow-sm relative z-50">
+    <header
+    className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out
+      ${
+        scrolled
+          ? "backdrop-blur-md bg-white/70 border-b border-white/40 shadow-md"
+          : "bg-white border-b border-gray-100 shadow-sm"
+      }`}
+  >
       <div className="max-w-7xl mx-auto py-3 flex items-center justify-between">
 
         {/* Logo */}

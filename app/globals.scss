@@ -146,6 +146,16 @@ p {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   a.get_started {
     background: $button-bg;
     color: $text-white;
@@ -175,7 +185,7 @@ header {
 
 .hero_section {
   background: linear-gradient(135deg, #033c3f 0%, #002124 100%);
-
+padding-top: 120px;
   button.top_chips {
     border: 0.8px solid #ffffff1a;
     border-radius: 4px;
@@ -225,7 +235,7 @@ header {
       gap: 10px;
 
       h3 {
-        // color: $text-white;
+        color: $text-white;
         font-size: 14px;
       }
     }
@@ -281,7 +291,9 @@ header {
         font-size: 14px;
       }
     }
-
+input {
+  accent-color: $color-green;
+}
     .form_group {
       padding-bottom: 14px;
       label {

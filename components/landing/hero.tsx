@@ -19,8 +19,8 @@ export default function Hero() {
         <div className="flex flex-wrap -mx-4">
           <div className="w-full md:w-1/2 px-4 hero_right_wrap">
             <button className="top_chips pb-10px">Pennsylvania Licensed Physicians</button>
-            <h1 className="pb-20px pt-10px">Apply for a Pennsylvania Medical Marijuana Card <span>Online Today</span></h1>
-            <p>Doctor evaluations help patients qualify for a medical marijuana card Pennsylvania residents trust, with licensed providers, private consultations, and a simple process.</p>
+            <h1 className="pb-20px pt-10px text-white">Apply for a Pennsylvania Medical Marijuana Card <span>Online Today</span></h1>
+            <p className="text-white">Doctor evaluations help patients qualify for a medical marijuana card Pennsylvania residents trust, with licensed providers, private consultations, and a simple process.</p>
             <div className="features_wrap flex gap-4 pt-30px pb-30px">
               {features.map(({ label, icon }) => (
                 <div className="feature_item" key={label}>

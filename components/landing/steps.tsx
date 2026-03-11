@@ -34,25 +34,28 @@ const steps = [
 export default function MedicalCardSteps() {
   return (
     <section
-      className="min-h-screen flex flex-col items-center justify-center px-10 py-20"
+      className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-10 py-16 sm:py-20"
       style={{ backgroundColor: "#0b2620" }}
     >
       {/* Heading */}
-      <div className="text-center mb-16">
-        <h2 className="text-white text-4xl font-bold mb-1">
+      <div className="text-center mb-10 sm:mb-16">
+        <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold mb-1">
           Steps to Receive Your Pennsylvania
         </h2>
-        <h2 className="text-4xl font-bold mb-5" style={{ color: "#2db882" }}>
+        <h2
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-5"
+          style={{ color: "#2db882" }}
+        >
           Medical Marijuana Card
         </h2>
-        <p className="text-gray-400 text-sm max-w-md mx-auto leading-relaxed">
+        <p className="text-gray-400 text-sm max-w-md mx-auto leading-relaxed px-2">
           Patients can complete their evaluation through a secure online
           consultation without unnecessary clinic visits.
         </p>
       </div>
 
-      {/* Cards — 4 in a single row */}
-      <div className="grid grid-cols-4 gap-4 w-full max-w-6xl mb-16">
+      {/* Cards — responsive grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-6xl mb-10 sm:mb-16">
         {steps.map(({ id, icon: Icon, title, description }) => (
           <div
             key={id}
@@ -85,7 +88,7 @@ export default function MedicalCardSteps() {
 
       {/* CTA Button */}
       <button
-        className="flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold transition-all duration-200 hover:opacity-80"
+        className="flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold transition-all duration-200 hover:opacity-80 w-full sm:w-auto justify-center"
         style={{
           border: "1px solid #2db882",
           color: "#2db882",

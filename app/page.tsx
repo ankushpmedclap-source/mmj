@@ -10,6 +10,9 @@ import Benifits from "@/components/landing/benifits";
 import Pricing from "@/components/landing/pricing";
 import Reviews from "@/components/landing/reviews";
 import SpeakWithDoc from "@/components/landing/speakwithdoc";
+import Faq from "@/components/landing/faq";
+import Footer from "@/components/footer/footer";
+import BackToTop from "@/components/backtotop";
 
 export default function Home() {
   return (
@@ -25,7 +28,10 @@ export default function Home() {
       <Benifits />
       <Pricing />
       <Reviews />
+      <Faq />
       <SpeakWithDoc />
+      <Footer />
+      <div className="back_to_top"><BackToTop /> </ div>
     </>
   );
 }
