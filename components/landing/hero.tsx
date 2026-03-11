@@ -1,6 +1,6 @@
 import formicon from "@/public/assets/form-top-icon.png";
 import Image from "next/image";
-import Form from "@/app/components/landing/form";
+import Form from "@/components/landing/form";
 
 export default function Hero() {
   const features = [

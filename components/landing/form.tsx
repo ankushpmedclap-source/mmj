@@ -5,7 +5,7 @@ import formicon from "@/public/assets/form-top-icon.png";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {formSchema} from "@/app/lib/formSchema"
+import {formSchema} from "@/lib/formSchema"
 
 export default function Form() {
   const {
